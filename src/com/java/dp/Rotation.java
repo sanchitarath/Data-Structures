@@ -3,7 +3,7 @@ package com.java.dp;
 public class Rotation {
 	private void rotate() {
 
-		int[] arr = { 2, 7, 6, 4, 11, 9 };
+		int[] arr = {2,5,6,3,1 };
 
 		int rotatedArr[] = new int[arr.length];
 
