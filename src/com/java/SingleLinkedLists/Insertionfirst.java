@@ -27,6 +27,14 @@ public class Insertionfirst {
 		return n;
 	}
 	
+	public void PopOut()
+	{
+		
+		
+		head=head.next;
+		
+		
+	}
 
 	public static void main(String[] args) 
 	{
@@ -38,6 +46,8 @@ public class Insertionfirst {
 			list.Addfirst(i);
 		}
 		
+		//list.printlist();
+		list.PopOut();
 		list.printlist();
 
 	}

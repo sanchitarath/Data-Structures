@@ -67,4 +67,10 @@ class Node{
 		data=d;
 		next=null;
 	}
+
+	public Node(Node n) {
+		// TODO Auto-generated constructor stub
+	}
+
+	
 	}

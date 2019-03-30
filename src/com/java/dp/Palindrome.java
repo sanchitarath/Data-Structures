@@ -7,7 +7,7 @@ public class Palindrome {
 	String str="katak";
 	char[]chararr=str.toCharArray();
 	int k=0;
-	int j;
+	//int j;
 	boolean flag=true;
 	for(int ch=chararr.length-1;ch>=chararr.length/2;ch--)
 	{
@@ -20,7 +20,7 @@ public class Palindrome {
 		
 	}
 	
-	if(flag){
+	if(flag=true){
 		System.out.println("Palindrome");
 	}
 	

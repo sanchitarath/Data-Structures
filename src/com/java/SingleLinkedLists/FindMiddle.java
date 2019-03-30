@@ -65,7 +65,45 @@ public class FindMiddle {
 		return h2.data;
 	
 	}
-	 public void printlist()
+	
+	public void detectloop()
+	{
+		Node h1=head;
+		Node h2=head;
+		//h1=h1.next.next;
+		//h2=h2.next;
+		
+		while(h1!=null && h1.next!=null)
+			{
+			if(h1.next==h2.next)
+			{
+				System.out.println("Loop exists");
+				break;
+			}
+			h1=h1.next.next;
+			h2=h2.next;
+			
+			//h1.next=null;
+			//System.out.println("Loop is removed");
+		    }
+		
+		if(h1==h2)
+		{
+			h2=head;
+			while(h1.next!=h2.next)
+			{
+				h1=h1.next;
+				h2=h2.next;
+			}
+			System.out.println("Loop removed");
+		}
+		
+			}
+	
+	 
+
+
+	public void printlist()
 	 {
 		 Node n=head;
 		 while(n!=null)
@@ -86,7 +124,11 @@ public class FindMiddle {
 		}
 		//list.printlist();
 		//list.MiddleElement();
-		list.lastseven();
+		//list.lastseven();
+		list.head.next.next.next.next=list.head.next;
+		//list.printlist();
+		list.detectloop();
+		list.printlist();
 		}
 
 
