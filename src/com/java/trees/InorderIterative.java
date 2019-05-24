@@ -88,11 +88,6 @@ public class InorderIterative {
 
 		sumInorder(root,root,true,true,7);
 
-		//		for (Integer e : list) 
-		//		{
-		//			System.out.println(e);
-		//		}
-
 	}
 
 }
