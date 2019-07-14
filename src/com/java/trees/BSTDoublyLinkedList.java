@@ -18,7 +18,7 @@ public class BSTDoublyLinkedList {
 		if(prev==null)
 		{
 			prev=root;
-			Head=root;
+			Head=prev;
 		}
 		else{
 		prev.right=root;
@@ -27,7 +27,6 @@ public class BSTDoublyLinkedList {
 		}
 		convertToDLL(root.right);
 		
-		//return prev;
 	}
 	
 	public static void main(String[] args) 
