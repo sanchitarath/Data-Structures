@@ -8,7 +8,6 @@ public class LIS {
 	{
 		int n=arr.length;
 		int maxlength=0;
-		//int result=1;
 		int[] temp=new int[n];
 		Arrays.fill(temp, 1);
 		
@@ -16,11 +15,10 @@ public class LIS {
 		{
 			for(int j=0;j<i;j++)
 			{
-				if(arr[j]<arr[i])
-						//&& (1+temp[j])>result)
+				if(arr[j]<arr[i] && (1+temp[j])>temp[i])
 				{
 					temp[i]=1+temp[j];
-					//result=temp[i];
+					
 				}
 			}
 		}
@@ -30,17 +28,17 @@ public class LIS {
 			if(temp[i]>maxlength)
 			{
 				maxlength=temp[i];
-				System.out.println(arr[i]);
+				//System.out.println(arr[i]);
 			}
 		}
 	return maxlength;
 	}
 	public static void main(String[] args) 
 	{
-		//int[] arr={10,22,9,33,21,50,41,60,80};
-		//int[]arr1={3,4,-1,0,6,2,3};
-		int[]arr2={10,9,2,5,3,4};
-		int length=findLengthLIS(arr2);
+		int[] arr={10,22,9,33,21,50,41,60,80};
+		int[]arr1={3,4,-1,0,6,2,3};
+		//int[]arr2={10,9,2,5,3,4};
+		int length=findLengthLIS(arr);
 		System.out.println("Length of longest increasing subsequence is "+ length);
 
 	}
